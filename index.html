@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
 <title>МаккоЛи BBQ — корейский гриль у Нарвской</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Manrope:wght@400;500;700&family=Noto+Serif+KR:wght@700&display=swap" rel="stylesheet">
@@ -25,6 +26,10 @@ h1,h2,h3{font-family:Unbounded,sans-serif;font-weight:600;line-height:1.1;letter
 .btn-ghost{background:rgba(255,255,255,.06);color:var(--text);border:1px solid rgba(255,255,255,.14)}
 .btn-ghost:hover{background:rgba(255,255,255,.12)}
 
+.concept{position:fixed;top:0;left:0;right:0;z-index:70;background:#ffd36b;color:#1a0d05;font:600 13px/1.3 Manrope;text-align:center;padding:8px 14px}
+.concept a{text-decoration:underline}
+nav{top:34px!important}
+@media(max-width:620px){nav{top:50px!important}}
 /* nav */
 nav{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,backdrop-filter .3s}
 nav.solid{background:rgba(15,13,12,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
@@ -198,6 +203,7 @@ footer{border-top:1px solid var(--line);padding:70px 0 40px;background:var(--bg2
 </head>
 <body>
 
+<div class="concept">Неофициальный концепт редизайна — это не сайт ресторана. Бронь и контакты — на <a href="https://makkolispb.ru" rel="nofollow">makkolispb.ru</a></div>
 <nav id="nav"><div class="wrap">
   <a href="#" class="logo"><i>막</i>МаккоЛи</a>
   <div class="links"><a href="#grill">Гриль</a><a href="#menu">Меню</a><a href="#lunch">Бизнес-ланч</a><a href="#contacts">Контакты</a></div>
@@ -372,10 +378,11 @@ footer{border-top:1px solid var(--line);padding:70px 0 40px;background:var(--bg2
       <div><label>Время</label><select id="tm"></select></div>
       <div><label>Гриль</label><div class="seg"><label><input type="radio" name="g" checked><span>Нужен</span></label><label><input type="radio" name="g"><span>Нет</span></label></div></div>
       <div><label>Имя</label><input required placeholder="Как к вам обращаться"></div>
-      <div><label>Телефон</label><input required type="tel" placeholder="+7 999 999-99-99"></div>
+      <div><label>Телефон</label><input required type="tel" placeholder="+7 999 999-99-99" autocomplete="off"></div>
       <div class="full"><label>Пожелания</label><textarea placeholder="День рождения, детский стул, стол у окна…"></textarea></div>
       <label class="check full"><input type="checkbox" checked required> Согласен на обработку персональных данных</label>
-      <button class="btn btn-fire full">Забронировать стол</button>
+      <p class="full" style="font-size:13px;color:var(--ember2)">Демо-форма концепта: данные никуда не отправляются. Чтобы забронировать по-настоящему, используйте makkolispb.ru.</p>
+      <button class="btn btn-fire full">Забронировать стол (демо)</button>
       <div class="ok" id="ok"><h3>Готово! 🔥</h3><p style="color:var(--muted)">Это демо-версия дизайна — заявка никуда не отправлена.</p></div>
     </form>
   </div>
